@@ -10,24 +10,28 @@
 body{
     height: 100%;
     width: 100%;
-    overflow: auto;
+    overflow: visible;
+    
 }
 html{
     scroll-behavior: smooth;
+    overflow: visible;
+
 }
 /* nav{
     scroll-snap-align: start ;
-} */
-/* section{
+}  */
+section{
     scroll-snap-align:start;
+    height: 100vh;
     
 }
 .container{
     scroll-snap-type: y mandatory;
-    overflow-y:scroll;
-    height: 800px;
+    overflow-y: scroll;
+    height: 100vh;
     
-} */
+}
 .max-width{
     max-width: 1300px;
     padding: 0 80px;
@@ -41,9 +45,11 @@ html{
     display: block;
     width: 100%;
     font-family: Georgia, 'Times New Roman', Times, serif, sans-serif ;
-    min-height: 60px;
-    background: rgba(0, 0, 0, 0.8) url("../pic3.jpeg");
+    /* min-height: 60px; */
+    /* background: rgba(0, 0, 0, 0.8) url("../pic3.jpeg"); */
     background-repeat: no-repeat;
+    /* background-color: #226089; */
+    background: linear-gradient(to right, black, #24272C);
     background-blend-mode: darken;
     height: 77px;
     
@@ -64,7 +70,9 @@ html{
 }
 
 .navbar .logo a{
-    color: white ;
+    background: linear-gradient(to right,#2FB8FF, #9EECD9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 35px;
     font-weight: 600;
     padding-left: 10%;
@@ -103,21 +111,28 @@ html{
 .navbar .menu li {
     list-style: none;
     display: inline-flex;
+    
     /* display: flex; */
     /* align-items: center; */
 }
 
 .navbar .menu li a{
     /* color: rgb(246, 191, 191); */
-    color: rgb(255, 254, 254);
+    /* color: rgb(255, 254, 254); */
+    background: linear-gradient(to right,#2FB8FF, #9EECD9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 19px;
     font-weight: 500;
     margin-left: 25px;
     transition: transform 0.5s ease;
 }
 .navbar .menu li a:hover{
-    color: rgb(255, 254, 254);
+    /* color: rgb(255, 254, 254); */
     /* font-size: 23px; */
+    background: linear-gradient(to right,#2FB8FF, #9EECD9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     transform: scale(1.2,1.2);
 }
 
@@ -129,12 +144,14 @@ html{
 
 .home{
     display: flex;
-    background:url("../pic3.jpeg") no-repeat center;
-    height: 800px;
+    /* background:url("../pic3.jpeg") no-repeat center; */
+    height: 100vh;
+    background: linear-gradient(black, #24272C);
+    /* background: #24272C; */
     color: white;
-    min-height: 500px;
+    /* min-height: 500px; */
     font-family: Georgia, 'Times New Roman', Times, serif, sans-serif ;
-
+    
 }
 
 .home .max-width{
@@ -153,12 +170,19 @@ html{
 
 .home .home-content .text-1{
     font-size: 30px;
+    background: linear-gradient(#2FB8FF, #9edbec);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+
 .home .home-content .text-2{
     font-size: 75px;
     font-weight: 600;
     margin-left: -3px;
     transition: transform 0.5s ease;
+    background: linear-gradient(#2FB8FF, #9EECD9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .home .home-content .text-2:hover{
     transform: scale(1.02,1.02);
@@ -166,35 +190,40 @@ html{
 .home .home-content .text-3{
     font-size: 35px;
     margin: 5px 0;
+    background: linear-gradient(#2FB8FF, #9edbec);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* About me  */
 .about{
     
     display: flex;
-    background:url("../img18.jpeg") no-repeat center;
-    
-    min-height: 500px;
+    /* background:url("../img18.jpeg") no-repeat center; */
+    background: linear-gradient( #24272C, black);
+    /* min-height: 500px; */
     font-family: Georgia, 'Times New Roman', Times, serif, sans-serif ;
     align-items: center;
     justify-content: center;
     /* background: black; */
-    height: 800px;
+    height: 100vh;
     color: white;
-    min-height: 500px;
+    /* min-height: 500px; */
     max-width: 100%;
-    max-height: 110vh;
+    /* max-height: 110vh; */
     
 }
 
 .about .title{
     font-family: Georgia, 'Times New Roman', Times, serif, sans-serif ;
     text-align: center;
-    color: white;
+    background: linear-gradient(#2FB8FF, #9EECD9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 40px;
     font-weight: 500;
-    /* padding-top: 25px; */
-    padding-bottom: 45px ;
+    padding-top: 120px;
+    padding-bottom: 105px ;
     
 }
 
@@ -213,7 +242,7 @@ html{
     border-radius: 10px;
     border-color: rgb(27, 150, 231);
     border-style: double;
-    transition: transform 1s ease;
+    transition: transform 0.5s ease;
 }
 .about-content .left img:hover{
     transform: scale(1.08,1.08);
@@ -223,27 +252,33 @@ html{
 }
 .about-content .right {
     width: 55%;
-    font-size: 20px; 
+    font-size: 20px;
+    background: linear-gradient(#2FB8FF, #9eebec);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     
     /* display:table-column; */
 }
-.about-content .right a {
-    position: absolute;
+.about-content .right button {
+    position:sticky;
     margin: 15px 0px;
     padding: 4px 14px;
     margin-bottom: 150px 50px;
-    color: white;
-    border: 2px solid white;
+    
+    background: linear-gradient(#2FB8FF, #9EECD9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 2px solid #2FB8FF;
     border-radius: 25px;
     font-size: 26px;
-    background: none;
+    /* background: none; */
     color: white;
     transition: transform 0.3s ease;
     
 }
 
-.about-content .right a:hover {
+.about-content .right button:hover {
     transform: scale(1.08,1.08);
 }
 
@@ -256,17 +291,18 @@ html{
 #projects{
     /* margin: 40px; */
     
-    background: url(../img18.jpeg) no-repeat center;
-    min-height: 500px;
+    /* background: url(../img18.jpeg) no-repeat center; */
+    background: linear-gradient(black, #24272C);
+    /* min-height: 500px; */
     font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
     align-items: center;
     justify-content: center;
     /* background: black; */
-    height: 800px;
+    height: 100vh;
     color: white;
-    min-height: 500px;
+    /* min-height: 500px; */
     max-width: 100%;
-    max-height: 110vh;
+    /* max-height: 110vh; */
     
 }
 
@@ -277,12 +313,12 @@ html{
 }
 
 #projects .box{
-    border: 2px solid rgb(31, 18, 146);
+    border: 2px solid #2FB8FF;
     padding: 36px;
     padding-bottom: 100px;
     margin: 48px 35px;
     border-radius: 40px;
-    background: rgba(58, 57, 57, 0.4);
+    background: rgb(31, 30, 30);
     margin-bottom: 10px;
     padding-bottom: 10px;
     transition: transform 0.8s ease;
@@ -290,6 +326,7 @@ html{
     width: 500px;
     max-width: 100%;
     max-inline-size: 400px;
+    box-shadow: 0 0 10px #2FB8FF;
     
    
     
@@ -307,6 +344,9 @@ html{
 #projects .box h2{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 28px;
+    background: linear-gradient(#2fd2ff, #9eecd1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-align: center;
     padding-top: 20px;
 }
@@ -315,6 +355,7 @@ html{
     font-size: 18px;
     text-align: center;
     padding: 20px;
+    
     /* padding-bottom: 40px; */
 }
 #projects .box ul{
@@ -322,6 +363,9 @@ html{
     font-size: 18px;
     text-align: center;
     padding: 20px;
+    background: linear-gradient(#2fd2ff, #9ee8ec);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     max-width: 100%;
     
     /* padding-bottom: 40px; */
@@ -337,12 +381,14 @@ html{
 }
 
 #projects h1{
-    color: white;
+    background: linear-gradient(#2FB8FF, #9EECD9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-family: Georgia, 'Times New Roman', Times, serif, sans-serif ;
     text-align: center;
     font-size: 44px;
     font-weight: 500;
-    padding-top: 52px;
+    padding-top: 137px;
     padding-bottom: 45px ;
 }
 
@@ -350,27 +396,29 @@ html{
 
 .skills{
     /* display: flex; */
-    background:url("../img18.jpeg") no-repeat center;
-    
-    min-height: 500px;
+    /* background:url("../img18.jpeg") no-repeat center; */
+    background: linear-gradient( #24272C, black);
+    /* min-height: 500px; */
     font-family: Georgia, 'Times New Roman', Times, serif, sans-serif ;
     align-items: center;
     justify-content: center;
     /* background: black; */
-    height: 800px;
+    height: 100vh;
     color: white;
-    min-height: 500px;
+    /* min-height: 500px; */
     max-width: 100%;
-    max-height: 110vh;
+    /* max-height: 110vh; */
 }
 .skills .tittle{
     font-family: Georgia, 'Times New Roman', Times, serif, sans-serif ;
     text-align: center;
-    color: white;
+    background: linear-gradient(#2FB8FF, #9EECD9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 40px;
     font-weight: 500;
-    padding-top: 125px;
-    padding-bottom: 45px;
+    padding-top: 137px;
+    padding-bottom: 106px;
     
 }
 
@@ -386,6 +434,7 @@ html{
 
 .skills .skills-content .left{
     width: 50%
+    
 }
 .skills .skills-content .right{
     width: 40%
@@ -394,10 +443,16 @@ html{
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 10px;
+    background: linear-gradient(#2FB8FF, #9EECD9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .skills .skills-content .left p{
     font-size: 20px;
     margin-bottom: 10px;
+    background: linear-gradient(#2FB8FF, #9EECD9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .skills .skills-content .right .bars{
     margin-bottom: 14px;
@@ -428,13 +483,23 @@ html{
 .skills .skills-content .right .bars .info span{
     height: 2px;
     float: left;
-    background: #2187e7;
+    background: linear-gradient(to right,#2facff, #9eecd1);
 
 }
+
 .skills .skills-content .right .bars .info .html{
     width: 90%;
     animation: html 2s;
 }
+.skills .skills-content .right h2 {
+    transition: transform 0.8s ease;
+}
+.skills .skills-content .right h2:hover {
+    transform: scale(1.08,1.08);
+}
+
+
+
 .css{
     width: 60%;
     animation: css 2s;
@@ -521,29 +586,33 @@ html{
 
 #contact{
     
-    background:url("../img18.jpeg") no-repeat center;
-    
-    min-height: 500px;
+    /* background:url("../img18.jpeg") no-repeat center; */
+    background: linear-gradient(black, #24272C);
+    /* min-height: 500px; */
     font-family: Georgia, 'Times New Roman', Times, serif, sans-serif ;
     align-items: center;
     justify-content: center;
     /* background: black; */
-    height: 800px;
+    height: 100vh;
     color: white;
-    min-height: 500px;
+    /* min-height: 500px; */
     max-width: 100%;
-    max-height: 110vh;
+    /* max-height: 110vh; */
+    
 }
 
 #contact h1{
     font-family: Georgia, 'Times New Roman', Times, serif, sans-serif ;
     text-align: center;
-    color: white;
+    background: linear-gradient(#2FB8FF, #9EECD9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 40px;
     font-weight: 500;
     /* padding-top: 25px; */
     padding-bottom: 35px;
-    padding-top: 65px;
+    padding-top: 112px;
+    
 }
 #contact::before{
     content: "";
@@ -560,6 +629,7 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;padding-bottom: 34px;
+    
 }
 
 #contact-box input,
@@ -580,31 +650,47 @@ html{
 }
 #contact-box label{
     font-size: 1.2rem ;
-    color: white;
+    background: linear-gradient(#2FB8FF, #9EECD9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+#contact-box input{
+    background: linear-gradient(#2FB8FF, #9EECD9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#contact-box textarea{
+    background: linear-gradient(#2FB8FF, #9EECD9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-#contact-box a {
-    position:absolute;
+#contact-box button {
+    
     margin: 20px 13px;
     padding: 4px 14px;
     margin-bottom: 150px 50px;
-    color: white;
-    border: 2px solid white;
+    background: linear-gradient(#2FB8FF, #9EECD9);
+    background: linear-gradient(#2FB8FF, #9EECD9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 2px solid #2FB8FF;
     border-radius: 25px;
-    font-size: 1.3rem;
-    background: none;
+    font-size: 26px;
+    /* background: none; */
     color: white;
     transition: transform 0.3s ease;
     
 }
 
-#contact-box a:hover {
+#contact-box button:hover {
     transform: scale(1.08,1.08);
 }
 
 footer .center{
     text-align: center;
-    background-color: rgb(5, 0, 75);
+    background: linear-gradient(black, #24272C);
     color: white;
     padding: 3px 20px;
     font-family:Verdana, Geneva, Tahoma, sans-serif ;
@@ -667,6 +753,7 @@ footer .center{
     .home .max-width{
         margin: auto 0 auto -11px;
     }
+    .skils
     .about{
         max-height:none;
         height:auto;
